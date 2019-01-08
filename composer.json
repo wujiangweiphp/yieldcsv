@@ -1,0 +1,18 @@
+{
+  "name":"wujiangweiphp/yieldcsv",
+  "description": "php use yield export huge csv",
+  "authors":[
+    {
+      "name" : "wujiangwei"
+    }
+  ],
+  "license":"MIT",
+  "require":{
+    "php":">=5.5"
+  },
+  "autoload":{
+    "psr-4": {
+      "wujiangweiphp\\yieldcsv\\": "src/"
+    }
+  }
+}

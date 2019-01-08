@@ -5,6 +5,12 @@
  * Date: 2019/1/8
  * Time: 10:34
  */
+
+namespace wujiangweiphp\yieldcsv;
+
+use PDO;
+use Exception;
+
 class YieldCsv
 {
     /**
@@ -121,7 +127,7 @@ class YieldCsv
     {
         $file_name = empty($query_info['file_name']) ? date('Y-m-d H:i:s') : $query_info['file_name'];
         try {
-            $data = $this->getFileData($query_info, $data_type);
+            $data      = $this->getFileData($query_info, $data_type);
             $file_name = iconv('utf-8', 'gbk', $file_name);
             $output = fopen('php://output', 'w') or die("can‘t open php://output");
             //告诉浏览器这个是一个csv文件
